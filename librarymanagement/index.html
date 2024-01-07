@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Library Management System</title>
+</head>
+<body>
+  <div class="container">
+    
+    <section id="member-management">
+      <h2>Member Management</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="members-container"></tbody>
+      </table>
+      <form id="add-member-form" class="form">
+        <input type="text" id="memberName" placeholder="Name" required>
+        <input type="email" id="memberEmail" placeholder="Email" required>
+        <button type="submit">Add Member</button>
+      </form>
+      <form id="edit-member-form" class="form">
+        <input type="text" id="editMemberId" placeholder="Member ID" required>
+        <input type="text" id="editMemberName" placeholder="New Name">
+        <input type="email" id="editMemberEmail" placeholder="New Email">
+        <button type="submit">Edit Member</button>
+      </form>
+      <form id="delete-member-form" class="form">
+        <input type="text" id="deleteMemberId" placeholder="Member ID" required>
+        <button type="submit">Remove Member</button>
+      </form>
+      <h6 id="all-members">All Members</h6>
+    </section>
+
+    <section id="book-management">
+      <h2>Book Management</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+          </tr>
+        </thead>
+        <tbody id="books-container"></tbody>
+      </table>
+      <form id="add-book-form" class="form">
+        <input type="text" id="bookTitle" placeholder="Title" required>
+        <input type="text" id="bookAuthor" placeholder="Author" required>
+        <button type="submit">Add Book</button>
+      </form>
+      <form id="edit-book-form" class="form">
+        <input type="text" id="editBookId" placeholder="Book ID" required>
+        <input type="text" id="editBookTitle" placeholder="New Title">
+        <input type="text" id="editBookAuthor" placeholder="New Author">
+        <button type="submit">Edit Book</button>
+      </form>
+      <form id="delete-book-form" class="form">
+        <input type="text" id="deleteBookId" placeholder="Book ID" required>
+        <button type="submit">Remove</button>
+      </form>
+      <h6 id="all-Books"> All Books</h6>
+    </section>
+
+    <section id="book-issuing-returning">
+      <h2>Book Issue and Return</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Member ID</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="transactions-container"></tbody>
+      </table>
+      <form id="issueForm" class="form">
+        <input type="text" id="issueMemberId" placeholder="Member ID" required>
+        <input type="text" id="issueBookId" placeholder="Book ID" required>
+        <button type="submit" class="issue">Issue Book</button>
+
+      </form>
+      <form id="ReturnForm" class="form">
+        <input type="text" id="returnMemberId" placeholder="Member ID" required>
+        <input type="text" id="returnBookId" placeholder="Book ID" required>
+        <button type="submit" class="return">Return Book</button>
+      </form>
+
+      <h6 id="all-Actions">All Actions</h6>
+    </section>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
